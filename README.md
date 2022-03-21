@@ -49,7 +49,7 @@ module.exports = withPlugins(
 - Set the localization setting file in the root directory of the web project. For more information refer to the [documentation](https://github.com/vinissimus/next-translate#add-i18njs-config-file). Simple example as below:
     ```es6
     module.exports = {
-    locales: ["en", "cn"],
+    locales: ["en", "ta"],
     defaultLocale: "en",
     pages: {
         "*": ["common", "screen"]
@@ -66,9 +66,9 @@ module.exports = withPlugins(
 
     i18n.fallbacks = true;
     i18n.translations = {
-    cn: {
-        common: require("cn/common.json"),
-        screen: require("cn/screen.json")
+    ta: {
+        common: require("ta/common.json"),
+        screen: require("ta/screen.json")
     },
     en: {
         common: require("en/common.json"),
@@ -93,7 +93,7 @@ export default function App() {
 
 #### `lang`
 - returns the current language as string 
-- Example ( 'en', 'cn' )
+- Example ( 'en', 'ta' )
 
 #### `setLanguage`
 - A React hook to set a new language. Wraps with useRouter from Next.js & i18n.locale for Expo 
